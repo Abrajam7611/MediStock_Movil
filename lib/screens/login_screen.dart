@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart'; // Asegúrate de importar la pantalla de inicio
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -12,9 +13,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _login() {
     if (_formKey.currentState!.validate()) {
-      // Aquí podrías agregar la lógica de autenticación.
-      print("Usuario: ${_usernameController.text}");
-      print("Contraseña: ${_passwordController.text}");
+      // Aquí podrías agregar la lógica de autenticación, por ahora solo redirigimos
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => HomeScreen()), // Redirigir a HomeScreen
+      );
     }
   }
 
@@ -54,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: _login,
+                onPressed: _login, // Al presionar, llamamos a _login
                 child: Text('Iniciar sesión'),
               ),
             ],
