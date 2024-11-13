@@ -2,25 +2,27 @@
 import 'package:flutter/material.dart';
 
 class EditProfileScreen extends StatelessWidget {
+  const EditProfileScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Editar Perfil'),
+        title: const Text('Editar Perfil'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Editar Nombre de Usuario:'),
-            TextField(),
-            SizedBox(height: 20),
+            const Text('Editar Nombre de Usuario:'),
+            const TextField(),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Aquí se puede agregar la funcionalidad de guardado en el futuro
               },
-              child: Text('Guardar'),
+              child: const Text('Guardar'),
             ),
           ],
         ),
