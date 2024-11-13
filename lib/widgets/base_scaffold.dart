@@ -12,7 +12,7 @@ class BaseScaffold extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        backgroundColor: const Color.fromARGB(255, 49, 140, 231),
+        backgroundColor: const Color.fromARGB(255, 110, 153, 197),
       ),
       drawer: Drawer(
         child: Container(
